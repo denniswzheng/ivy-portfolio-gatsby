@@ -1,6 +1,6 @@
 // const urljoin = require("url-join")
 // import urlJoin from 'url-join';
-const siteConfig = require("./siteConfig")
+const siteConfig = require("./siteConfig");
 // import siteConfig from "./siteConfig"
 
 module.exports = {
@@ -13,11 +13,10 @@ module.exports = {
     social: {
       twitter: siteConfig.twitter,
       facebook: siteConfig.facebook,
-      github: siteConfig.github,
+      linkedin: siteConfig.linkedin,
     },
   },
   plugins: [
-
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
@@ -64,8 +63,14 @@ module.exports = {
             resolve: "gatsby-remark-copy-linked-files",
             options: {
               // destinationDir: "public",
-              ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff` ,`webp`],
-          
+              ignoreFileExtensions: [
+                `png`,
+                `jpg`,
+                `jpeg`,
+                `bmp`,
+                `tiff`,
+                `webp`,
+              ],
             },
           },
           {
@@ -87,7 +92,6 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-
         ],
       },
     },
@@ -143,7 +147,6 @@ module.exports = {
     `gatsby-plugin-netlify`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
   ],
-}
-
+};

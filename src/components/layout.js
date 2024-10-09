@@ -48,24 +48,24 @@ const Layout = (props) => {
               >
                 <Link to={`/work`}>Work</Link>
               </li>
-              <li
+              {/* <li
                 className={`nav-home  ${data.pathname.includes("/news") ? "nav-current" : ""} `}
                 role="menuitem"
               >
                 <Link to={`/news`}>News</Link>
-              </li>
+              </li> */}
               <li
                 className={`nav-home  ${data.pathname.includes("/contact") ? "nav-current" : ""} `}
                 role="menuitem"
               >
                 <Link to={`/contact`}>Contact</Link>
               </li>
-              <li
+              {/* <li
                 className={`nav-home  ${data.pathname.includes("/elements") ? "nav-current" : ""} `}
                 role="menuitem"
               >
                 <Link to={`/elements`}>Elements</Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
           <div className="site-head-center">
@@ -75,7 +75,7 @@ const Layout = (props) => {
           </div>
           <div className="site-head-right">
             <div className="social-links">
-              <Link
+              {/* <Link
                 to={`https://facebook.com/${social.facebook}`}
                 title="Facebook"
                 target="_blank"
@@ -90,15 +90,15 @@ const Layout = (props) => {
                 rel="noopener noreferrer"
               >
                 Instagram
-              </Link>
+              </Link> */}
 
               <Link
-                to={`https://github.com/lilxyzz/gatsby-clay`}
-                title="Github"
+                to={`https://www.linkedin.com/in/ivy-lin-9898lin`}
+                title="Linkedin"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Github
+                Linkedin
               </Link>
             </div>
           </div>
@@ -110,23 +110,7 @@ const Layout = (props) => {
         </div>
       </main>
       <footer className="site-foot">
-        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
-        Built by {""}
-        <a
-          href="https://travislord.xyz/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Travis Lord
-        </a>
-        {""} & {""}
-        <a
-          href="https://github.com/abdulwaqar844"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Abdul Waqar
-        </a>
+        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link>
       </footer>
     </div>
   );

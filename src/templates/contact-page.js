@@ -1,68 +1,92 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { navigate } from 'gatsby-link'
+import { navigate } from "gatsby-link";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
-import "../utils/normalize.css"
-import "../utils/css/screen.css"
+import "../utils/normalize.css";
+import "../utils/css/screen.css";
 function encode(data) {
   return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
 }
 const ContactPage = ({ data }, location) => {
-
-  const [state, setState] = React.useState({})
+  const [state, setState] = React.useState({});
   const handleChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value })
-  }
+    setState({ ...state, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        'form-name': form.getAttribute('name'),
+        "form-name": form.getAttribute("name"),
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch((error) => alert(error))
-  }
+      .then(() => navigate(form.getAttribute("action")))
+      .catch((error) => alert(error));
+  };
 
-  const siteTitle = data.site.siteMetadata.title
-  const social = data.site.siteMetadata.social
+  const siteTitle = data.site.siteMetadata.title;
+  const social = data.site.siteMetadata.social;
   return (
     <Layout title={siteTitle} social={social}>
-      <Seo title={data.markdownRemark.frontmatter.title}
-        description={data.markdownRemark.frontmatter.description} 
-        image={data.markdownRemark.frontmatter.thumbnail.childImageSharp.gatsbyImageData.images.fallback.src}
-        />
-     
+      <Seo
+        title={data.markdownRemark.frontmatter.title}
+        description={data.markdownRemark.frontmatter.description}
+        image={
+          data.markdownRemark.frontmatter.thumbnail.childImageSharp
+            .gatsbyImageData.images.fallback.src
+        }
+      />
+
       <article className="contact-form page-template ">
-      {data.markdownRemark.frontmatter.thumbnail && (
-        <div className="post-content-image">
-          <GatsbyImage
-            image={getImage(data.markdownRemark.frontmatter.thumbnail)}
-            className="kg-image"
-            alt={data.markdownRemark.frontmatter.title} />
-        </div>
-      )}
+        {/* {data.markdownRemark.frontmatter.thumbnail && (
+          <div className="post-content-image">
+            <GatsbyImage
+              image={getImage(data.markdownRemark.frontmatter.thumbnail)}
+              className="kg-image"
+              alt={data.markdownRemark.frontmatter.title}
+            />
+          </div>
+        )} */}
         <div className="post-content-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque. Nullam non nisi est sit amet facilisis. Quisque id diam vel quam. Morbi tincidunt augue interdum velit. Pellentesque adipiscing commodo elit at imperdiet dui accumsan. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque. Commodo odio aenean sed adipiscing diam donec adipiscing tristique risus. Mi tempus imperdiet nulla malesuada pellentesque. Maecenas ultricies mi eget mauris pharetra et ultrices. Cursus risus at ultrices mi tempus imperdiet nulla. Sit amet nisl suscipit adipiscing bibendum est ultricies. At volutpat diam ut venenatis tellus in. Cursus eget nunc scelerisque viverra mauris in. Ut aliquam purus sit amet luctus venenatis lectus.</p>
+          {/* <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Venenatis urna cursus eget nunc scelerisque. Nullam non nisi est sit
+            amet facilisis. Quisque id diam vel quam. Morbi tincidunt augue
+            interdum velit. Pellentesque adipiscing commodo elit at imperdiet
+            dui accumsan. Adipiscing vitae proin sagittis nisl rhoncus mattis
+            rhoncus urna neque. Commodo odio aenean sed adipiscing diam donec
+            adipiscing tristique risus. Mi tempus imperdiet nulla malesuada
+            pellentesque. Maecenas ultricies mi eget mauris pharetra et
+            ultrices. Cursus risus at ultrices mi tempus imperdiet nulla. Sit
+            amet nisl suscipit adipiscing bibendum est ultricies. At volutpat
+            diam ut venenatis tellus in. Cursus eget nunc scelerisque viverra
+            mauris in. Ut aliquam purus sit amet luctus venenatis lectus.
+          </p> */}
 
           <h3 id="forms">Form</h3>
-          <form name="contact" method="POST" data-netlify="true" action="thanks" onSubmit={handleSubmit}
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            action="thanks"
+            onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
             <p hidden>
               <label>
-                Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+                Don’t fill this out:{" "}
+                <input name="bot-field" onChange={handleChange} />
               </label>
             </p>
             <div className="row gtr-uniform">
@@ -110,7 +134,12 @@ const ContactPage = ({ data }, location) => {
               {/* Break */}
               {/* General, Purchase, Commissions, Exhibitions, Gallery Feature, Other */}
               <div className="col-12">
-                <select name="category" id="category" onChange={handleChange} required={true}>
+                <select
+                  name="category"
+                  id="category"
+                  onChange={handleChange}
+                  required={true}
+                >
                   <option value>-Nature of Enquiry-</option>
                   <option value={"General"}>General</option>
                   <option value={"Purchase"}>Purchase</option>
@@ -152,9 +181,9 @@ const ContactPage = ({ data }, location) => {
                   required={true}
                 />
               </div>
-              
+
               <div data-netlify-recaptcha="true"></div>
-  
+
               {/* Break */}
               <div className="col-12">
                 <ul className="actions">
@@ -165,57 +194,49 @@ const ContactPage = ({ data }, location) => {
                       className="primary"
                     />
                   </li>
-
                 </ul>
               </div>
             </div>
           </form>
         </div>
-
-
       </article>
-
-
-
     </Layout>
-  )
-}
+  );
+};
 
 const indexQuery = graphql`
   query {
     site {
       siteMetadata {
         title
-        social{
+        social {
           twitter
           facebook
         }
       }
     }
-    markdownRemark(frontmatter: {templateKey: {eq: "contact-page"}}) {
+    markdownRemark(frontmatter: { templateKey: { eq: "contact-page" } }) {
       frontmatter {
         title
         description
         thumbnail {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
-                    }
+          }
         }
       }
-      
     }
   }
-`
+`;
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={indexQuery}
-    render={data => (
+    render={(data) => (
       <ContactPage location={props.location} data={data} {...props} />
     )}
   />
-)
-
+);
 
 // import React from 'react'
 // import { navigate } from 'gatsby-link'
@@ -261,12 +282,12 @@ export default props => (
 //         onSubmit={handleSubmit}
 //       >
 //         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-        // <input type="hidden" name="form-name" value="contact" />
-        // <p hidden>
-        //   <label>
-        //     Don’t fill this out: <input name="bot-field" onChange={handleChange} />
-        //   </label>
-        // </p>
+// <input type="hidden" name="form-name" value="contact" />
+// <p hidden>
+//   <label>
+//     Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+//   </label>
+// </p>
 //         <p>
 //           <label>
 //             Your name:
