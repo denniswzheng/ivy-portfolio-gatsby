@@ -2,8 +2,8 @@
 templateKey: work-sub-page
 thumbnail: /img/projects/tarte/tarte-logo.jpg
 date: 2023-03-06T05:10:14.676Z
-title: Tarte Project
-description: "Generate Lorem Ipsum placeholder text. Select the number of characters, words, sentences or paragraphs, and hit generate!"
+title: Tarte
+description:
 images:
   - /img/projects/tarte/tarte-logo.png
   - /img/projects/tarte/p16.png

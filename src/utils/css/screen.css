@@ -47,9 +47,9 @@ body {
 /* Layout
 /* ---------------------------------------------------------- */
 .site-main {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 .site-wrapper {
   padding: 3vw;
   min-height: 100vh;
@@ -123,12 +123,11 @@ body {
 }
 
 .site-foot {
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
   margin: 3vw 0 1vw;
   text-align: center;
   color: color(var(--color-border) l(-20%));
   font-size: 1.5rem;
-  
 }
 footer.site-foot a {
   text-decoration: underline;
@@ -202,7 +201,7 @@ footer.site-foot a {
 
 .site-head-logo {
   /*font-family: 'Libre Barcode 39', cursive;*/
-  font-family: 'Muli',sans-serif;
+  font-family: "Muli", sans-serif;
   flex-shrink: 0;
   display: block;
   padding: 10px;
@@ -312,7 +311,8 @@ footer.site-foot a {
     line-height: 1.15em;
     font-weight: 200;
     opacity: 0;
-    transition: transform 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99),
+    transition:
+      transform 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99),
       opacity 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: scale(1.1) translateY(-25px);
   }
@@ -373,7 +373,8 @@ footer.site-foot a {
   .site-head-open .site-head-left a,
   .site-head-open .site-head-right a {
     opacity: 1;
-    transition: transform 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99),
+    transition:
+      transform 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99),
       opacity 0.9s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: scale(1) translateY(0px);
   }
@@ -412,7 +413,7 @@ footer.site-foot a {
   overflow: hidden;
   counter-increment: posts;
   margin: 1rem;
-  border-radius: 12px;  
+  border-radius: 12px;
 }
 
 @media (max-width: 700px) {
@@ -745,8 +746,11 @@ footer.site-foot a {
 }
 
 /* 404 page */
-.good-bye-page { display: flex; flex-direction: column; align-items: center; }
-
+.good-bye-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* thank you page */
 .thank-you p {
@@ -755,10 +759,15 @@ footer.site-foot a {
   align-items: center;
 }
 
-
 /* Image boarder */
-.kg-image { border-radius: 10px; }
+.kg-image {
+  border-radius: 10px;
+}
 
-img.gatsby-resp-image-image { border-radius: 10px !important;}
+img.gatsby-resp-image-image {
+  border-radius: 10px !important;
+}
 
-img {border-radius: 10px;}
+img {
+  border-radius: 10px;
+}
