@@ -120,6 +120,10 @@ module.exports = {
         // develop: true, // Enable while using `gatsby develop`
         // tailwind: true, // Enable tailwindcss support
         whitelistPatterns: [/^slick/],
+        ignore: [
+          "slick-carousel/slick/slick.css",
+          "slick-carousel/slick/slick-theme.css",
+        ],
         // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       },
