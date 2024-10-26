@@ -2,13 +2,12 @@
 templateKey: work-sub-page
 thumbnail: /img/projects/crabtree/crabtree-logo.jpg
 date: 2023-03-16T04:59:59.653Z
-title: Crabtree & Evelyn
+title:
 description:
 images:
   - /img/projects/crabtree/crabtree-logo.png
   - /img/projects/crabtree/p1.png
   - /img/projects/crabtree/p2.png
-  - /img/projects/crabtree/p4.png
   - /img/projects/crabtree/p5.png
   - /img/projects/crabtree/p6.png
   - /img/projects/crabtree/p7.png

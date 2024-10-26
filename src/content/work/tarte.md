@@ -2,7 +2,7 @@
 templateKey: work-sub-page
 thumbnail: /img/projects/tarte/tarte-logo.jpg
 date: 2023-03-06T05:10:14.676Z
-title: Tarte
+title:
 description:
 images:
   - /img/projects/tarte/tarte-logo.png

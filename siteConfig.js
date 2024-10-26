@@ -8,8 +8,8 @@ const siteConfig = {
   twitter: "",
   facebook: "",
   linkedin: "",
-  manifest_icon: `src/img/vase.png`,
-  image: `/vase.png`,
+  manifest_icon: `src/img/ivy.png`,
+  image: `/ivy.png`,
 };
 
 module.exports = siteConfig;
