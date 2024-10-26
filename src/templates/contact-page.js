@@ -74,7 +74,7 @@ const ContactPage = ({ data }, location) => {
             mauris in. Ut aliquam purus sit amet luctus venenatis lectus.
           </p> */}
 
-          <h3 id="forms">Form</h3>
+          <h3 id="forms">Contact Me</h3>
           <form
             name="contact"
             method="POST"
@@ -142,10 +142,6 @@ const ContactPage = ({ data }, location) => {
                 >
                   <option value>-Nature of Enquiry-</option>
                   <option value={"General"}>General</option>
-                  <option value={"Purchase"}>Purchase</option>
-                  <option value={"Commissions"}>Commissions</option>
-                  <option value={"Exhibitions"}>Exhibitions</option>
-                  <option value={"Gallery Feature"}>Gallery Feature</option>
                   <option value={"Other"}>Other</option>
                 </select>
               </div>
