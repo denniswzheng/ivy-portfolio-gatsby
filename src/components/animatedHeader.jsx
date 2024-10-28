@@ -5,7 +5,7 @@ const AnimatedHeader = () => {
   useEffect(() => {
     // The typewriter effect logic here
     const text =
-      "Hi, I'm Ivy!\nI'm a Cosmetic & Skincare\nProduct Developer.\nLet's work together!";
+      "Hi, I'm Ivy!\nI'm a Beauty/Skincare\nProduct Developer.\nLocated in Los Angeles.\nLet's work together!";
     let index = 0;
     const speed = 100; // milliseconds
     const typewriterElement = document.getElementById("typewriter");

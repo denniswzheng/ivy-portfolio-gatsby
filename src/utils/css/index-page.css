@@ -7,6 +7,13 @@
   }
 }
 
+@media (max-width: 600px) {
+  /* Adjust this size to your preference */
+  .animated-header h1 {
+    font-size: 3rem;
+  }
+}
+
 .animated-header {
   display: flex;
   flex-direction: column;
