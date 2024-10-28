@@ -23,4 +23,5 @@
   /*  Full viewport height */
   height: 100vh;
   position: relative;
+  padding-bottom: 120px;
 }
