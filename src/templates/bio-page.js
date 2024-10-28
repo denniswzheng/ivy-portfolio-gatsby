@@ -16,7 +16,7 @@ const BioPage = (props) => {
       social={site.siteMetadata.social}
     >
       <Seo
-        keywords={[`Gatsby Theme`, `Free Gatsby Template`, `Clay Gatsby Theme`]}
+        keywords={[`Ivy Lin`, `Product Developer`, `Skincare & Cosmetics`]}
         title={post.frontmatter.title}
         description={post.frontmatter.description || ""}
         image={

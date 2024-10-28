@@ -1,0 +1,29 @@
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: "Playfair Display", serif;
+} */
+
+.typewriter-container {
+  font-size: 2rem;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  /* The cursor, this seems to get long on line breaks*/
+  /* border-right: 0.15em solid black; */
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}

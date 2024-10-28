@@ -1,0 +1,17 @@
+@media (max-width: 1000px) {
+  /* Adjust this size to your preference */
+  .animated-header {
+    display: none !important; /* Hide the element on small screens */
+  }
+}
+
+.animated-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Centers vertically */
+  align-items: center;
+  /*  Full viewport height */
+  height: 100vh;
+  position: relative;
+}

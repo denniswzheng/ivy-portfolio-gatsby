@@ -74,7 +74,7 @@ const ContactPage = ({ data }, location) => {
             mauris in. Ut aliquam purus sit amet luctus venenatis lectus.
           </p> */}
 
-          <h3 id="forms">Contact Me</h3>
+          <h1 id="forms">Contact Me</h1>
           <form
             name="contact"
             method="POST"
