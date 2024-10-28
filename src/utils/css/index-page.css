@@ -7,15 +7,6 @@
   }
 }
 
-@media (max-width: 600px) {
-  /* Adjust this size to your preference */
-  .animated-header h1 {
-    /* Hide the element on small screens */
-    /* display: none !important; */
-    font-size: 2rem;
-  }
-}
-
 .animated-header {
   display: flex;
   flex-direction: column;
